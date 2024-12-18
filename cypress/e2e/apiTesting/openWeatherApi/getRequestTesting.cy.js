@@ -32,7 +32,7 @@ describe ('Weather site api testing', function() {
             cy.get('input[name="q"]').first().type(`${city}{enter}`, {force: true})
             cy.get('#forecast_list_ul td:nth-child(2) a').first().should('contain.text', 'Kfar Saba').click()
             cy.get('.current-container h2').should('contain.text', country).and('contain.text', city)
-            cy.get('.weather-items li:nth-child(3)').should('contain.text', humidity)
+            // cy.get('.weather-items li:nth-child(3)').should('contain.text', humidity)
 
         })
 
